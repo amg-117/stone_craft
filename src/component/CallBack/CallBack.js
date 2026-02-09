@@ -11,6 +11,8 @@ const CallBack = () => {
     setFile(event.target.files[0]);
   };
 
+  console.log(file);
+
   return (
     <div className={css.container}>
       <h2>Реализуем ваши идеи</h2>
