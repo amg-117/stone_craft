@@ -1,0 +1,107 @@
+.PortfolioSlider_container {
+  margin: 60px auto 200px;
+  h2 {
+    font-family: "Inter", sans-serif;
+    font-size: 36px;
+    color: black;
+    text-align: center;
+    margin: 0;
+  }
+}
+.PortfolioSlider_container .slider_border {
+  position: relative;
+  width: 1500px;
+  height: 370px;
+  margin: 50px auto 0;
+  border: 0.5px solid #1d1d1d;
+  border-radius: 2px;
+}
+.PortfolioSlider_container .slider {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1110px;
+}
+.PortfolioSlider_container .slide {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "img1 img2 img3"
+    "img1 img2 img4";
+  gap: 15px;
+  justify-content: center;
+  justify-items: center;
+  img {
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+  }
+}
+.PortfolioSlider_container .img_area1 {
+  grid-area: img1;
+}
+.PortfolioSlider_container .img_area2 {
+  grid-area: img2;
+}
+.PortfolioSlider_container .img_area3 {
+  grid-area: img3;
+}
+.PortfolioSlider_container .img_area4 {
+  grid-area: img4;
+}
+/* =========== MEDIA =========== */
+@media (max-width: 1600px) {
+  .PortfolioSlider_container {
+    margin: 60px auto 150px;
+  }
+  .PortfolioSlider_container .slider_border {
+    width: 700px;
+    height: 650px;
+  }
+  .PortfolioSlider_container .slider {
+    width: 800px;
+  }
+  .PortfolioSlider_container .slide {
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: auto 200px;
+    grid-template-areas:
+      "img1 img2"
+      "img3 img4";
+  }
+}
+@media (max-width: 1000px) {
+  .PortfolioSlider_container {
+    margin: 60px auto;
+  }
+  .PortfolioSlider_container .slider_border {
+    width: 500px;
+    height: 650px;
+  }
+  .PortfolioSlider_container .slider {
+    width: 600px;
+  }
+  .PortfolioSlider_container .slide {
+    grid-template-columns: auto 200px;
+    grid-template-rows: auto 170px;
+    grid-template-areas:
+      "img1 img2"
+      "img3 img4";
+    gap: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .PortfolioSlider_container .slider_border {
+    width: 300px;
+    height: 340px;
+  }
+  .PortfolioSlider_container .slider {
+    width: 340px;
+  }
+  .PortfolioSlider_container .slide {
+    grid-template-columns: 200px 130px;
+    grid-template-rows: auto 100px;
+    gap: 5px;
+  }
+}

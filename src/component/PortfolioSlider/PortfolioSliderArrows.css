@@ -1,0 +1,76 @@
+.PortfolioSlider_container .slick-prev,
+.PortfolioSlider_container .slick-next {
+  z-index: 1 !important; /* Убедитесь, что стрелки поверх слайдов */
+  width: 55px !important;
+  height: 55px !important;
+  background-color: rgba(0, 0, 0, 0.4) !important;
+  border: 1px solid black !important;
+  border-radius: 50% !important;
+}
+.PortfolioSlider_container .slick-prev::before,
+.PortfolioSlider_container .slick-next::before {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+}
+.PortfolioSlider_container .slick-prev::before {
+  content: "" !important;
+  border-top: 7.5px solid transparent !important;
+  border-bottom: 7.5px solid transparent !important;
+  border-right: 7px solid black !important;
+  transform: translateY(-50%) translateX(-75%) !important;
+}
+.PortfolioSlider_container .slick-next::before {
+  content: "" !important;
+  border-top: 7.5px solid transparent !important;
+  border-bottom: 7.5px solid transparent !important;
+  border-left: 7px solid black !important;
+  transform: translateY(-50%) translateX(-25%) !important;
+}
+.PortfolioSlider_container .slick-prev {
+  left: -70px !important;
+}
+.PortfolioSlider_container .slick-next {
+  right: -70px !important;
+}
+.PortfolioSlider_container .slick-dots {
+  bottom: -50px !important;
+  li {
+    width: 40px !important;
+    height: 30px !important;
+  }
+}
+.PortfolioSlider_container .slick-dots li button::before {
+  content: "" !important;
+  background-color: black;
+  width: 35px !important;
+  height: 3px !important;
+  border-radius: 5px;
+}
+/* ==== MEDIA ===== */
+@media (max-width: 768px) {
+  .PortfolioSlider_container .slick-prev,
+  .PortfolioSlider_container .slick-next {
+    width: 25px !important;
+    height: 25px !important;
+  }
+  .PortfolioSlider_container .slick-prev::before,
+  .PortfolioSlider_container .slick-next::before {
+    font-size: 12px !important; /* Размер иконки */
+  }
+  .PortfolioSlider_container .slick-prev {
+    left: -30px !important;
+  }
+  .PortfolioSlider_container .slick-next {
+    right: -30px !important;
+  }
+  .PortfolioSlider_container .slick-dots {
+    li {
+      margin: 0 !important;
+    }
+  }
+  .PortfolioSlider_container .slick-dots li button::before {
+    width: 25px !important;
+    height: 3px !important;
+  }
+}

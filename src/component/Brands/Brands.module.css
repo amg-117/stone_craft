@@ -1,0 +1,75 @@
+.brands_container {
+  padding: 20px 0;
+  background-color: #f4f3e4;
+  h2 {
+    padding: 40px 0;
+    text-align: center;
+    font-family: "HelveticaNeueCyr";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 1.3;
+    color: #1d1d1d;
+  }
+}
+.brands_images {
+  max-width: 1000px;
+  margin: 20px auto;
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  gap: 50px;
+  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
+  img {
+    mix-blend-mode: multiply;
+  }
+}
+.brands_geogrphy {
+  display: block;
+  width: 1125px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+  mix-blend-mode: color-burn;
+}
+/* ====== MEDIA ====== */
+@media (max-width: 1200px) {
+  .brands_container {
+    background-color: #f4f3e4;
+    h2 {
+      font-size: 30px;
+    }
+  }
+  .brands_images {
+    justify-content: center;
+    max-width: 700px;
+    gap: 15px;
+    img {
+      max-width: 120px;
+    }
+  }
+  .brands_geogrphy {
+    width: 750px;
+  }
+}
+@media (max-width: 768px) {
+  .brands_container {
+    background-color: #f4f3e4;
+    h2 {
+      padding: 10px 0;
+      font-size: 20px;
+    }
+  }
+  .brands_images {
+    justify-content: space-between;
+    gap: 0;
+    row-gap: 15px;
+    max-width: 330px;
+    img {
+      max-width: 60px;
+    }
+  }
+  .brands_geogrphy {
+    width: 340px;
+  }
+}

@@ -1,0 +1,250 @@
+.IndProd_container {
+  border: 1px solid black;
+  background-color: #f4f3e4;
+}
+.IndProd_title {
+  margin-top: 77px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 7.1rem;
+  h2 {
+    margin: 0;
+    font-family: "Inter", sans-serif;
+    font-size: 36px;
+    font-weight: 300;
+    color: black;
+    max-width: 380px;
+  }
+}
+.IndProd_title_comments {
+  div {
+    width: 350px;
+    height: 4px;
+    background-color: #1d1d1d;
+  }
+  p {
+    max-width: 635px;
+    margin: 0;
+    padding: 22px 0 0 0;
+    font-family: "Inter", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+  }
+}
+/*  */
+.img_border {
+  position: relative;
+  z-index: 2;
+  max-width: 1526px;
+  height: 837px;
+  margin: 170px auto 90px;
+  border: 1px solid #1d1d1d;
+}
+.img_container {
+  position: absolute;
+  top: -131px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;
+  margin: 0 auto;
+  width: 1110px;
+  height: 905px;
+}
+.img_box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 5px;
+  img {
+    height: 100%;
+    width: 100%;
+    transition: transform 0.3s ease;
+  }
+}
+.img_btn {
+  position: absolute;
+  bottom: -100%;
+  width: 100%;
+  z-index: 3;
+  background-color: rgba(29, 29, 29, 0.7);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  transition: bottom 0.3s ease;
+  text-decoration: none;
+  h6 {
+    margin: 5px 15px;
+    color: white;
+    font-size: clamp(18px, 20px, 24px);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+  }
+  p {
+    margin: 5px 15px;
+    color: #d7b56d;
+    font-size: 14px;
+    font-family: "Inter", sans-serif;
+  }
+}
+.img_box:hover .img_btn {
+  bottom: 0;
+}
+.img_box:hover img {
+  transform: scale(1.1);
+}
+/*  */
+.block_img {
+  display: grid;
+  grid-gap: 15px;
+  grid-template-areas:
+    "box1 box1 box2 box3"
+    "box1 box1 box2 box4"
+    "box5 box6 box7 box7"
+    "box8 box8 box9 box9";
+}
+.box1 {
+  grid-area: box1;
+}
+.box2 {
+  grid-area: box2;
+}
+.box3 {
+  grid-area: box3;
+}
+.box4 {
+  grid-area: box4;
+}
+.box5 {
+  grid-area: box5;
+}
+.box6 {
+  grid-area: box6;
+}
+.box7 {
+  grid-area: box7;
+}
+.box8 {
+  grid-area: box8;
+}
+.box9 {
+  grid-area: box9;
+}
+
+/* ===== MEDIA ===== */
+@media (max-width: 1600px) {
+  .img_border {
+    width: 1300px;
+  }
+}
+@media (max-width: 1400px) {
+  .img_border {
+    width: 1100px;
+    height: 1150px;
+  }
+  .img_container {
+    top: -131px;
+    width: 800px;
+  }
+  .block_img {
+    grid-gap: 5px;
+    grid-template-rows: repeat(6, 200px);
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+      "box1 box1 box1 box2 box2"
+      "box1 box1 box1 box2 box2"
+      "box7 box7 box5 box5 box5"
+      "box9 box9 box8 box8 box8"
+      "box3 box3 box3 box6 box6"
+      "box4 box4 box4 box6 box6";
+  }
+}
+@media (max-width: 1200px) {
+  .IndProd_title {
+    gap: 5rem;
+  }
+  .img_border {
+    width: 800px;
+    height: 850px;
+  }
+  .img_container {
+    top: -131px;
+    width: 700px;
+  }
+  .block_img {
+    grid-gap: 5px;
+    grid-template-rows: repeat(6, 150px);
+  }
+}
+@media (max-width: 1000px) {
+  .img_border {
+    width: 700px;
+    height: 720px;
+  }
+  .img_container {
+    width: 600px;
+  }
+  .block_img {
+    grid-template-rows: repeat(6, 130px);
+  }
+  .img_btn {
+    bottom: -100%;
+    width: 100%;
+    h6 {
+      margin: 5px 5px;
+      font-size: clamp(12px, 14px, 16px);
+    }
+    p {
+      margin: 5px 5px;
+      font-size: clamp(8px, 10px, 12px);
+    }
+  }
+}
+@media (max-width: 768px) {
+  .IndProd_title {
+    display: block;
+    width: 360px;
+    margin: 35px auto 0;
+    justify-items: center;
+    h2 {
+      font-size: 20px;
+      width: 100%;
+    }
+  }
+  .IndProd_title_comments {
+    div {
+      width: 100%;
+      margin: 20px 0 0 0;
+    }
+    p {
+      width: 100%;
+      padding: 14px 0 0 0;
+      font-size: 14px;
+    }
+  }
+
+  .img_border {
+    margin: 20px auto 35px;
+    width: 270px;
+    height: 640px;
+  }
+  .img_container {
+    top: 20px;
+    width: 340px;
+  }
+  .block_img {
+    grid-template-rows: repeat(6, 95px);
+  }
+  .img_btn {
+    bottom: -100%;
+    width: 100%;
+    h6 {
+      margin: 5px 5px;
+      font-size: clamp(10px, 12px, 14px);
+    }
+    p {
+      margin: 5px 5px;
+      font-size: clamp(8px, 10px, 12px);
+    }
+  }
+}

@@ -1,0 +1,176 @@
+.container {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: 500px 600px;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "title image"
+    "form image";
+  width: 100%;
+  padding: 60px 0;
+  background-color: #1d1d1d;
+  gap: 30px;
+}
+h2 {
+  font-family: "Inet", sans-serif;
+  font-size: 36px;
+  font-weight: 300;
+  color: white;
+  margin: 0;
+
+  grid-area: title;
+}
+/*  */
+.formWrapper {
+  max-width: 380px;
+  grid-area: form;
+  p {
+    font-family: "Inet", sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    color: white;
+    margin: 0 0 36px;
+  }
+}
+.input,
+.textarea {
+  width: 100%;
+  padding: 12px;
+  box-sizing: border-box;
+  margin-bottom: 14px;
+  background-color: #4e4e4e;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  border: none;
+  color: white;
+}
+.input::placeholder,
+.textarea::placeholder {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 400;
+}
+.input {
+  height: 46px;
+}
+.textarea {
+  height: 117px;
+  resize: none;
+}
+.fileLabel {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  margin-bottom: 16px;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.8);
+}
+.fileInput {
+  display: none;
+}
+.button {
+  width: 200px;
+  height: 46px;
+  padding: 16px;
+  background-color: #d7b56d;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #1d1d1d;
+}
+.button:hover {
+  background-color: #e8ab26;
+}
+/*  */
+.imageWrapper {
+  position: relative;
+  grid-area: image;
+  align-self: start;
+}
+.imageBorder {
+  width: 500px;
+  height: 440px;
+  border: 1px solid #d7b56d;
+  border-radius: 2px;
+}
+.image {
+  position: absolute;
+  width: 500px;
+  top: 50px;
+  left: 60px;
+  border-radius: 2px;
+}
+
+/* ======= MEDIA ======== */
+@media (max-width: 1300px) {
+  .container {
+    grid-template-columns: 310px 400px;
+    grid-template-rows: auto;
+    gap: 15px;
+  }
+  h2 {
+    font-size: 30px;
+  }
+  .formWrapper {
+    max-width: 300px;
+  }
+  .imageWrapper {
+    align-self: center;
+  }
+  .imageBorder {
+    width: 400px;
+    height: 400px;
+  }
+  .image {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    top: 30px;
+    left: 30px;
+    object-fit: cover;
+  }
+}
+
+@media (max-width: 900px) {
+  .container {
+    grid-template-columns: 600px;
+    grid-template-rows: auto 165px auto;
+    grid-template-areas:
+      "title"
+      "image"
+      "form";
+    justify-content: center;
+    justify-items: center;
+    gap: 20px;
+    text-align: center;
+  }
+  h2 {
+    font-size: 20px;
+  }
+  .formWrapper {
+    justify-items: center;
+    p {
+      font-size: 16px;
+    }
+  }
+  .imageBorder {
+    width: 300px;
+    height: 140px;
+  }
+  .image {
+    position: absolute;
+    width: 300px;
+    height: 140px;
+    object-fit: cover;
+    top: 15px;
+    left: 35px;
+  }
+}

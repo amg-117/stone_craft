@@ -1,0 +1,96 @@
+.MainSlider_container .slick-prev,
+.MainSlider_container .slick-next {
+  z-index: 1 !important; /* Убедитесь, что стрелки поверх слайдов */
+  width: 55px !important;
+  height: 55px !important;
+  background: rgba(255, 255, 255, 0.4) !important;
+  border: 1px solid #ffffff !important;
+  border-radius: 50% !important;
+}
+.MainSlider_container .slick-prev::before,
+.MainSlider_container .slick-next::before {
+  position: absolute !important;
+  top: 50% !important;
+  left: 50% !important;
+}
+.MainSlider_container .slick-prev::before {
+  content: "" !important;
+  border-top: 7.5px solid transparent !important;
+  border-bottom: 7.5px solid transparent !important;
+  border-right: 7px solid white !important;
+  transform: translateY(-50%) translateX(-75%) !important;
+}
+.MainSlider_container .slick-next::before {
+  content: "" !important;
+  border-top: 7.5px solid transparent !important;
+  border-bottom: 7.5px solid transparent !important;
+  border-left: 7px solid white !important;
+  transform: translateY(-50%) translateX(-25%) !important;
+}
+.MainSlider_container .slick-prev {
+  left: 200px !important; /* Переопределяем left */
+}
+.MainSlider_container .slick-next {
+  right: 200px !important; /* Переопределяем right */
+}
+.MainSlider_container .slick-dots {
+  bottom: 0px !important;
+  li {
+    width: 40px !important;
+    height: 30px !important;
+  }
+}
+.MainSlider_container .slick-dots li button::before {
+  content: "" !important;
+  background-color: white !important;
+  width: 35px !important;
+  height: 3px !important;
+  border-radius: 5px;
+}
+/* =========== MEDIA =========== */
+@media (max-width: 1200px) {
+  .MainSlider_container .slick-prev,
+  .MainSlider_container .slick-next {
+    width: 45px !important;
+    height: 45px !important;
+  }
+  .MainSlider_container .slick-prev::before {
+    border-top: 6.5px solid transparent !important;
+    border-bottom: 6.5px solid transparent !important;
+    border-right: 6px solid white !important;
+  }
+  .MainSlider_container .slick-next::before {
+    border-top: 6.5px solid transparent !important;
+    border-bottom: 6.5px solid transparent !important;
+    border-left: 6px solid white !important;
+  }
+  .MainSlider_container .slick-prev {
+    left: 150px !important; /* Переопределяем left */
+  }
+  .MainSlider_container .slick-next {
+    right: 150px !important; /* Переопределяем right */
+  }
+}
+@media (max-width: 768px) {
+  .MainSlider_container .slick-prev,
+  .MainSlider_container .slick-next {
+    width: 30px !important;
+    height: 30px !important;
+  }
+  .MainSlider_container .slick-prev::before {
+    border-top: 5px solid transparent !important;
+    border-bottom: 5px solid transparent !important;
+    border-right: 4px solid white !important;
+  }
+  .MainSlider_container .slick-next::before {
+    border-top: 5.5px solid transparent !important;
+    border-bottom: 5.5px solid transparent !important;
+    border-left: 5px solid white !important;
+  }
+  .MainSlider_container .slick-prev {
+    left: 10px !important; /* Переопределяем left */
+  }
+  .MainSlider_container .slick-next {
+    right: 10px !important; /* Переопределяем right */
+  }
+}
